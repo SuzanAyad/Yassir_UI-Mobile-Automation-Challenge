@@ -4,19 +4,19 @@
  
  
 
-This project contains 4 Packages
+# This project contains 4 Packages:-
 
-Utils Package
+## Utils Package
 Contains >> Setup Class, each time you make a new Test Class it has to extend this class to access its methods
 Also Contains >> Runner Class, to run the automated tests
 
-Pages Package
+## Pages Package
 Contains a class for each screen of the app
 
-StepDefinitions Package
+## StepDefinitions Package
 Contains Classes to execute the Gherkin steps
 
-How To Run it
+# How To Run it
 Open CMD navigate to pom.xml file location
 cd C://location-to-your-project-where-pom.xml-is-found
 
@@ -25,7 +25,7 @@ mvn clean verify
 >> Note That Maven, Java, Android and Node should be properly defined in
 Environmental variables as JAVA_HOME,  MAVEN_HOME, ANDROID_HOME, NODE_HOME
 
-How To Make Allure Report
+## How To Make Allure Report
 Open PowerShell and Type the following commands to install Allure Reports
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Type "Y" and Hit Enter
