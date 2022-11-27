@@ -1,0 +1,5 @@
+stepDefinitions\S01_ShowMovies.class
+utils\Runner.class
+utils\Setup.class
+pages\P01_MoviesList.class
+pages\P02_MovieDetails.class

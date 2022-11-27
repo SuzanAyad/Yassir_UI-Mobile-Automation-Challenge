@@ -1,13 +1,12 @@
 package utils;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidTouchAction;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.P01_MoviesList;
-
+import pages.P02_MovieDetails;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +18,8 @@ public class Setup {
 
     public static AppiumDriver appiumDriver;
     public static P01_MoviesList moviesList;
+
+    public static P02_MovieDetails movieDetails;
     public static AndroidTouchAction action;
 
 
@@ -41,9 +42,10 @@ public class Setup {
 
         URL url = new URL("http://localhost:4723/wd/hub");
         appiumDriver = new AppiumDriver(url, caps);
-        appiumDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        appiumDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         moviesList = new P01_MoviesList();
+        movieDetails = new P02_MovieDetails();
 
         action = new AndroidTouchAction(appiumDriver);
     }

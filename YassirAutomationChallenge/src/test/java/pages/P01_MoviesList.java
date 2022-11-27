@@ -17,7 +17,7 @@ public class P01_MoviesList extends Setup {
     // Scroll in movies list screen
     // Select specific movie item
     // Click on it
-    public void scrollToMovieItem(String movieItem) {
+    public void scrollDownAndSelectMovieItem(String movieItem) {
 
         AndroidElement element = (AndroidElement) appiumDriver.findElement
                 (MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"" + movieItem + "\").instance(0))"));
@@ -26,11 +26,10 @@ public class P01_MoviesList extends Setup {
     }
 
 
-    // locate the movie title
+    // locate the movie title in movie details screen
     public WebElement movieTitle() {
         return appiumDriver.findElement(By.id("com.skydoves.themovies:id/detail_header_title"));
     }
-
 
     // Assert that user navigates to movie details screen
     public void assertSuccessfullyNavigatingToMovieDetailsScreen(){
@@ -39,5 +38,15 @@ public class P01_MoviesList extends Setup {
         softAssert.assertTrue(movieTitle().getText().contains(expectedAlertTxt));
         softAssert.assertAll();
     }
+
+
+    public void scrollUpAndSelectFirstMovieItem(String firstMovieName) {
+
+        AndroidElement element = (AndroidElement) appiumDriver.findElement
+                (MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"" + firstMovieName + "\").instance(0))"));
+        element.click();
+        action.tap(ElementOption.element(element)).perform();
+    }
+
 
 }

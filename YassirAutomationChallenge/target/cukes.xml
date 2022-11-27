@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.341">
-    <testcase classname="F01_Going from main movies list screen to the movie details screen" name="user checks the movies list and go to the movie details screen" time="12.226">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="29.179">
+    <testcase classname="F01_Going from main movies list screen to the movie details screen and vs" name="user checks the movies list and go to the movie details screen" time="29.049">
         <system-out><![CDATA[Given user go to movies list screen.........................................passed
 When user select movie item "Emily the Criminal"............................passed
-Then user should be navigated to movie screen successfully..................passed
+And user should be navigated to movie screen successfully...................passed
+And user scroll in movie details screen and expand last review item "Ahmad".passed
+And user clicks navigate up button to go back to movies list screen.........passed
+And user select first movie in movies list "Emily the Criminal".............passed
+And user swipe Trailers.....................................................passed
+Then user go back to movies list screen.....................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
